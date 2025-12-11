@@ -3,7 +3,7 @@ import Video from "./Video";
 
 const HomeHeroText = () => {
   return (
-    <div className="font-[font1] pt-5 text-center">
+    <div className="font-[font1] pt-5 text-center text-white">
       <div className="text-[9.5vw] justify-center flex items-start uppercase leading-[8vw]">
         The spark
       </div>

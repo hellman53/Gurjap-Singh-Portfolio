@@ -1,9 +1,11 @@
+"use client";
+
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import React, { useRef } from "react";
 
-const Agence = () => {
+const AboutMe = () => {
   const imageDivRef = useRef(null)
   gsap.registerPlugin(ScrollTrigger)
 
@@ -23,7 +25,7 @@ const Agence = () => {
 
   return (
     <div>
-      <div className="section1">
+      <div className="section1 text-white">
         <div ref={imageDivRef} className="absolute overflow-hidden h-[20vw] w-[15vw] rounded-4xl top-44 left-[30vw]">
           <img
             className="h-full object-cover w-full"
@@ -56,4 +58,4 @@ const Agence = () => {
   );
 };
 
-export default Agence;
+export default AboutMe;
