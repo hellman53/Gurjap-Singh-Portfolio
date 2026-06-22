@@ -7,17 +7,35 @@ import React, { useRef } from "react";
 
 const AboutMe = () => {
   const imageDivRef = useRef(null)
+  const imageRef = useRef(null)
+  const imageArray = [
+    '/logo1.webp',
+    '/logo2.webp',
+    '/logo3.webp',
+    '/logo4.webp',
+    '/logo5.webp',
+    '/logo6.webp',
+    '/logo7.webp',
+    '/logo8.webp',
+    '/logo9.webp',
+    '/logo10.webp',
+    '/logo11.webp',
+  ]
+
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(() => {
     gsap.to(imageDivRef.current, {
-      scrollTrigger: { // ✅ must be lowercase
+      scrollTrigger: {
         trigger: imageDivRef.current,
         markers: true,
-        start: "top 25%", // optional
-        end: "bottom -75%", // optional
-        scrub: true, // optional if you want scroll sync
-        pin:true
+        start: "top 25%", 
+        end: "top -75%", 
+        scrub: true, 
+        pin:true,
+        onUpdate:(elem)=>{
+          console.log(elem.progress)
+        },
       },
       // x: 200, // just an example so you can see the animation
     });
@@ -27,9 +45,9 @@ const AboutMe = () => {
     <div>
       <div className="section1 text-white">
         <div ref={imageDivRef} className="absolute overflow-hidden h-[20vw] w-[15vw] rounded-4xl top-44 left-[30vw]">
-          <img
+          <img ref={imageRef}
             className="h-full object-cover w-full"
-            src="https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg"
+            src="/logo1.webp"
             alt=""
           />
         </div>
