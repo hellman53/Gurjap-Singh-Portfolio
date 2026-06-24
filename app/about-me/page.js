@@ -1,5 +1,5 @@
-import AboutMe from "@/pages/AboutMe"
+    import AboutMe from "@/pages/AboutMe"
 
-export default function aboutme(){
-    return <AboutMe/>;
-}
+    export default function aboutme(){
+        return <AboutMe/>;
+    }

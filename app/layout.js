@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import StairsEffect from "@/components/StairsEffect";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -45,7 +46,8 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div id="route-page">{children}</div>
+        <StairsEffect />
       </body>
     </html>
   );

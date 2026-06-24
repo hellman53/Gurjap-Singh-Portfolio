@@ -20,6 +20,12 @@ const AboutMe = () => {
     '/logo9.webp',
     '/logo10.webp',
     '/logo11.webp',
+    '/logo12.webp',
+    '/logo13.webp',
+    '/logo14.webp',
+    '/logo15.webp',
+    '/logo16.webp',
+    '/logo17.webp',
   ]
 
   gsap.registerPlugin(ScrollTrigger)
@@ -34,7 +40,11 @@ const AboutMe = () => {
         scrub: true, 
         pin:true,
         onUpdate:(elem)=>{
-          console.log(elem.progress)
+          const imageIndex = Math.floor(elem.progress*imageArray.length)
+          if(imageIndex < imageArray.length){
+            imageRef.current.src = imageArray[imageIndex]
+          }
+          // console.log(Math.floor(elem.progress*imageArray.length))
         },
       },
       // x: 200, // just an example so you can see the animation
@@ -47,7 +57,7 @@ const AboutMe = () => {
         <div ref={imageDivRef} className="absolute overflow-hidden h-[20vw] w-[15vw] rounded-4xl top-44 left-[30vw]">
           <img ref={imageRef}
             className="h-full object-cover w-full"
-            src="/logo1.webp"
+            src={imageArray[0]}
             alt=""
           />
         </div>
