@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import StairsEffect from "@/components/StairsEffect";
+import StairsEffect from "@/components/common/StairsEffect";
 import "./globals.css";
 
 const geistSans = Geist({

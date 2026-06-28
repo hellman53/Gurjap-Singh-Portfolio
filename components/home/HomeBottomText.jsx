@@ -1,5 +1,5 @@
 import React from 'react'
-import TransitionLink from '@/components/TransitionLink'
+import TransitionLink from '@/components/common/TransitionLink'
 import "./homePart.css"
 
 const HomeBottomText = () => {
