@@ -1,4 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import Navbar from "@/components/common/Navbar";
 import StairsEffect from "@/components/common/StairsEffect";
 import "./globals.css";
 
@@ -10,6 +12,20 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const lausanne300 = localFont({
+  src: "../public/font/Lausanne-300.woff2",
+  variable: "--font-lausanne-300",
+  display: "swap",
+  fallback: ["Helvetica Neue", "Arial", "sans-serif"],
+});
+
+const lausanne500 = localFont({
+  src: "../public/font/Lausanne-500.woff2",
+  variable: "--font-lausanne-500",
+  display: "swap",
+  fallback: ["Helvetica Neue", "Arial", "sans-serif"],
 });
 
 export const metadata = {
@@ -44,8 +60,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${lausanne300.variable} ${lausanne500.variable} antialiased`}
       >
+        <Navbar />
         <div id="route-page">{children}</div>
         <StairsEffect />
       </body>

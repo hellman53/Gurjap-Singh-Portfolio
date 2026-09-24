@@ -3,7 +3,6 @@ import Video from "@/components/home/Video";
 import HomeHeroText from "@/components/home/HomeHeroText";
 import HomeBottomText from "@/components/home/HomeBottomText";
 import SocialFloating from "@/components/home/SocialFloating";
-import FloatingName from "@/components/home/FloatingName";
 
 const Home = () => {
   return (
@@ -21,7 +20,6 @@ const Home = () => {
 
       {/* Floating Elements */}
       <SocialFloating />
-      <FloatingName />
     </div>
   );
 };

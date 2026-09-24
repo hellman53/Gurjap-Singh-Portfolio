@@ -1,21 +1,24 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "font1";
-  src: url("/fonts/Lausanne-300.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
+@theme {
+  --font-font1: var(--font-lausanne-300), "Helvetica Neue", Arial, sans-serif;
+  --font-font2: var(--font-lausanne-500), "Helvetica Neue", Arial, sans-serif;
 }
 
-@font-face {
-  font-family: "font2";
-  src: url("/fonts/Lausanne-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
+/* Fallback guarantees for font1 and font2 classes */
+.font-\[font1\], .font-font1 {
+  font-family: var(--font-lausanne-300), "Helvetica Neue", Arial, sans-serif !important;
+}
+
+.font-\[font2\], .font-font2 {
+  font-family: var(--font-lausanne-500), "Helvetica Neue", Arial, sans-serif !important;
 }
 
 body {
   background-color: #111;
+  color: #fff;
+  font-family: var(--font-lausanne-500), "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 @keyframes fadein {
@@ -25,5 +28,22 @@ body {
 
 .animate-fadein {
   animation: fadein 0.8s ease-out forwards;
+}
+
+/* Rock-solid infinite marquee */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex !important;
+  width: max-content !important;
+  animation: marquee-scroll 14s linear infinite !important;
+  will-change: transform;
 }
 
