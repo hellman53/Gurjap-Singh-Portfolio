@@ -43,29 +43,45 @@ const MenuOverlay = ({ isOpen, onClose }) => {
       title: "WORK",
       marqueeText: "SEE EVERYTHING",
       href: "/projects",
-      images: ["/logo1.webp", "/logo4.webp", "/logo8.webp", "/logo12.webp"],
-      symbol: "✦",
+      images: [
+        "/projects/book-my-doctor.jpg",
+        "/projects/refactor-ai.jpg",
+        "/projects/transit-xpert.jpg",
+        "/projects/memora.jpg",
+      ],
     },
     {
       title: "ABOUT",
       marqueeText: "KNOW ME",
       href: "/about-me",
-      images: ["/logo2.webp", "/logo5.webp", "/logo9.webp", "/logo15.webp"],
-      symbol: "✦",
+      images: [
+        "/projects/creative_code.jpg",
+        "/projects/cpu_gold.jpg",
+        "/projects/crypto_cube.jpg",
+        "/projects/devtools-suite.jpg",
+      ],
     },
     {
       title: "PLAYGROUND",
       marqueeText: "EXPERIMENTS & LAB",
-      href: "/projects",
-      images: ["/logo3.webp", "/logo6.webp", "/logo10.webp", "/logo16.webp"],
-      symbol: "✦",
+      href: "/playground",
+      images: [
+        "/projects/quantum_sphere.jpg",
+        "/projects/react_3d.jpg",
+        "/projects/cyber_wire.jpg",
+        "/projects/ai_neural.jpg",
+      ],
     },
     {
       title: "CONTACT",
       marqueeText: "SEND A MESSAGE",
       href: "https://www.linkedin.com/in/gurjap-singh-8714a0301/",
-      images: ["/logo7.webp", "/logo11.webp", "/logo13.webp", "/logo17.webp"],
-      symbol: "❤",
+      images: [
+        "/projects/cyber_server.jpg",
+        "/projects/linkbox.jpg",
+        "/projects/neon_tunnel.jpg",
+        "/projects/crypto_cube.jpg",
+      ],
     },
   ];
 
@@ -109,7 +125,6 @@ const MenuOverlay = ({ isOpen, onClose }) => {
             marqueeText={item.marqueeText}
             href={item.href}
             images={item.images}
-            symbol={item.symbol}
             onNavigate={onClose}
           />
         ))}

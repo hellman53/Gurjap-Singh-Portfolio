@@ -8,9 +8,8 @@ import TransitionLink from "./TransitionLink";
 const MenuRow = ({
   title,
   marqueeText = "SEE EVERYTHING",
-  images = ["/logo1.webp", "/logo2.webp"],
+  images = ["/projects/creative_code.jpg", "/projects/react_3d.jpg"],
   href = "/",
-  symbol = "✦",
   onNavigate,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -45,22 +44,21 @@ const MenuRow = ({
   const renderMarqueeBlock = (keyPrefix) => (
     <div key={keyPrefix} className="flex items-center shrink-0">
       {[...Array(5)].map((_, i) => (
-        <span key={`${keyPrefix}-${i}`} className="inline-flex items-center">
-          <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black uppercase tracking-tight text-black font-[font2] whitespace-nowrap leading-none select-none">
-            {marqueeText}
-          </span>
-          <span className="mx-4 sm:mx-6 md:mx-8 inline-block overflow-hidden rounded-full w-12 h-7 sm:w-16 sm:h-9 md:w-20 md:h-11 lg:w-24 lg:h-12 border-2 border-black/70 shadow-sm bg-black/10 shrink-0">
+        <span
+          key={`${keyPrefix}-${i}`}
+          className="inline-flex items-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black uppercase tracking-tight text-black font-[font2] whitespace-nowrap leading-none select-none"
+        >
+          <span>{marqueeText}</span>
+          <span
+            className="mx-6 sm:mx-8 md:mx-10 lg:mx-14 inline-flex items-center justify-center overflow-hidden rounded-full h-[0.8em] w-[1.75em] border-2 sm:border-[3px] border-black/85 shadow-sm bg-black/10 shrink-0 relative"
+            style={{ top: "-0.065em" }}
+          >
             <img
               src={images[i % images.length]}
-              alt="sticker capsule"
+              alt="tech capsule"
               className="w-full h-full object-cover select-none pointer-events-none"
             />
           </span>
-          {symbol && (
-            <span className="text-black/80 text-xl sm:text-3xl md:text-4xl font-black mr-4 sm:mr-6 md:mr-8 select-none">
-              {symbol}
-            </span>
-          )}
         </span>
       ))}
     </div>
