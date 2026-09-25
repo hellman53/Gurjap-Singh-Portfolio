@@ -7,6 +7,7 @@ import BeatTheAiGame from "@/components/playground/BeatTheAiGame";
 import HolographicQuantumCore from "@/components/playground/HolographicQuantumCore";
 import HackerTerminal from "@/components/playground/HackerTerminal";
 import AudioVisualSynth from "@/components/playground/AudioVisualSynth";
+import TicTacToe3D from "@/components/playground/TicTacToe3D";
 import PlaygroundFooter from "@/components/playground/PlaygroundFooter";
 
 export default function PlaygroundPage() {
@@ -25,7 +26,7 @@ export default function PlaygroundPage() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/15 pb-4">
               <div>
                 <span className="text-xs font-mono uppercase tracking-widest text-[#D3FD50] block">
-                  ✦ EXPERIMENT 01 // 2D/3D RIGID BODY PHYSICS
+                  EXPERIMENT 01 // 2D/3D RIGID BODY PHYSICS
                 </span>
                 <h2 className="font-[font2] font-black text-3xl sm:text-5xl uppercase tracking-tight text-white leading-none mt-1">
                   ZERO-GRAVITY TECH SANDBOX
@@ -45,7 +46,7 @@ export default function PlaygroundPage() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/15 pb-4">
               <div>
                 <span className="text-xs font-mono uppercase tracking-widest text-[#D3FD50] block">
-                  ✦ EXPERIMENT 02 // SPEED CODING MINI-GAME
+                  EXPERIMENT 02 // SPEED CODING MINI-GAME
                 </span>
                 <h2 className="font-[font2] font-black text-3xl sm:text-5xl uppercase tracking-tight text-white leading-none mt-1">
                   BEAT THE AI REFACTOR
@@ -65,7 +66,7 @@ export default function PlaygroundPage() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/15 pb-4">
               <div>
                 <span className="text-xs font-mono uppercase tracking-widest text-[#D3FD50] block">
-                  ✦ EXPERIMENT 03 // THREE.JS WEBGL RENDER
+                  EXPERIMENT 03 // THREE.JS WEBGL RENDER
                 </span>
                 <h2 className="font-[font2] font-black text-3xl sm:text-5xl uppercase tracking-tight text-white leading-none mt-1">
                   3D HOLOGRAPHIC QUANTUM CORE
@@ -85,7 +86,7 @@ export default function PlaygroundPage() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/15 pb-4">
               <div>
                 <span className="text-xs font-mono uppercase tracking-widest text-[#D3FD50] block">
-                  ✦ EXPERIMENT 04 // RETRO CRT COMMAND LINE
+                  EXPERIMENT 04 // RETRO CRT COMMAND LINE
                 </span>
                 <h2 className="font-[font2] font-black text-3xl sm:text-5xl uppercase tracking-tight text-white leading-none mt-1">
                   HACKER CLI TERMINAL
@@ -105,7 +106,7 @@ export default function PlaygroundPage() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/15 pb-4">
               <div>
                 <span className="text-xs font-mono uppercase tracking-widest text-[#D3FD50] block">
-                  ✦ EXPERIMENT 05 // WEB AUDIO API & LIVE FFT
+                  EXPERIMENT 05 // WEB AUDIO API & LIVE FFT
                 </span>
                 <h2 className="font-[font2] font-black text-3xl sm:text-5xl uppercase tracking-tight text-white leading-none mt-1">
                   AUDIO-VISUAL SYNTHESIZER
@@ -116,6 +117,26 @@ export default function PlaygroundPage() {
               </p>
             </div>
             <AudioVisualSynth />
+          </section>
+        )}
+
+        {/* Experiment 06: 3D Holographic Tic-Tac-Toe */}
+        {(activeTab === "all" || activeTab === "tictactoe") && (
+          <section className="flex flex-col gap-6">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/15 pb-4">
+              <div>
+                <span className="text-xs font-mono uppercase tracking-widest text-[#D3FD50] block">
+                  EXPERIMENT 06 // 2D NEON ARCADE & MINIMAX AI
+                </span>
+                <h2 className="font-[font2] font-black text-3xl sm:text-5xl uppercase tracking-tight text-white leading-none mt-1">
+                  NEON CYBER TIC-TAC-TOE
+                </h2>
+              </div>
+              <p className="max-w-md font-mono text-xs text-white/60 uppercase tracking-widest leading-relaxed">
+                A vibrant 2D cybernetic arcade duel with dynamic particle bursts, custom color themes, Web Audio chimes, and an unbeatable Minimax AI engine.
+              </p>
+            </div>
+            <TicTacToe3D />
           </section>
         )}
       </main>

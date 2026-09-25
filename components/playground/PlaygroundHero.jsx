@@ -33,6 +33,7 @@ const PlaygroundHero = ({ activeTab, setActiveTab }) => {
     { id: "3d", label: "03. 3D QUANTUM CORE" },
     { id: "terminal", label: "04. HACKER CLI" },
     { id: "synth", label: "05. AUDIO SYNTH" },
+    { id: "tictactoe", label: "06. NEON TIC-TAC-TOE" },
   ];
 
   return (
@@ -41,9 +42,8 @@ const PlaygroundHero = ({ activeTab, setActiveTab }) => {
         {/* Top Telemetry Ticker */}
         <div className="flex flex-wrap items-center justify-between gap-4 text-xs font-mono tracking-widest uppercase text-white/50 border-b border-white/10 pb-4">
           <div className="flex items-center gap-3">
-            <span className="flex items-center gap-1.5 text-[#D3FD50]">
-              <span className="w-2 h-2 rounded-full bg-[#D3FD50] animate-ping" />
-              <span>LAB_SYSTEM: ONLINE</span>
+            <span className="text-[#D3FD50] font-bold">
+              LAB_SYSTEM: ONLINE
             </span>
             <span className="text-white/20">|</span>
             <span className="hidden sm:inline">TURBOPACK 16 + REACT 19</span>
@@ -57,7 +57,7 @@ const PlaygroundHero = ({ activeTab, setActiveTab }) => {
             <span className="text-white/20">|</span>
             <div className="flex items-center gap-1.5 text-[#D3FD50]">
               <IoSparklesOutline className="animate-spin text-sm" style={{ animationDuration: "5s" }} />
-              <span>5 LAB UNITS</span>
+              <span>6 LAB UNITS</span>
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@ const PlaygroundHero = ({ activeTab, setActiveTab }) => {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div>
             <span className="text-xs font-mono uppercase tracking-widest text-[#D3FD50] block mb-2">
-              ✦ EXPERIMENTAL DIGITAL LABORATORY
+              EXPERIMENTAL DIGITAL LABORATORY
             </span>
             <h1 className="font-[font2] font-black text-[15vw] sm:text-[13vw] md:text-[11vw] uppercase leading-none tracking-tighter text-white select-none">
               PLAY<span className="text-[#D3FD50]">GROUND</span>
@@ -79,15 +79,15 @@ const PlaygroundHero = ({ activeTab, setActiveTab }) => {
           </div>
         </div>
 
-        {/* Filter Navigation Tabs */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none pt-4">
+        {/* Filter Navigation Tabs (Padding prevents active button scale and glow from clipping at the start) */}
+        <div className="flex items-center gap-3 overflow-x-auto p-3 scrollbar-none">
           {tabs.map((tab) => {
             const isActive = activeTab === tab.id;
             return (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-4 sm:px-5 py-2 rounded-full font-mono text-xs uppercase tracking-wider whitespace-nowrap transition-all duration-200 cursor-pointer ${
+                className={`px-4 sm:px-5 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider whitespace-nowrap transition-all duration-200 cursor-pointer ${
                   isActive
                     ? "bg-[#D3FD50] text-black font-bold shadow-[0_0_20px_rgba(211,253,80,0.3)] scale-105"
                     : "border border-white/15 bg-white/5 text-white/70 hover:border-white/40 hover:text-white"

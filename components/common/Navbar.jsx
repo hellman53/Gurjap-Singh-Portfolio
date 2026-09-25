@@ -13,9 +13,8 @@ const Navbar = () => {
         {/* Brand / Logo (Clickable to Home) */}
         <TransitionLink
           href="/"
-          className="pointer-events-auto group flex items-center gap-3 px-4 py-2 rounded-md border border-white/20 bg-black/30 backdrop-blur-md transition-all duration-300 hover:border-[#D3FD50]"
+          className="pointer-events-auto group flex items-center px-4 py-2 rounded-md border border-white/20 bg-black/30 backdrop-blur-md transition-all duration-300 hover:border-[#D3FD50]"
         >
-          <span className="w-2 h-2 rounded-full bg-[#D3FD50] animate-pulse" />
           <span className="font-[font2] text-sm md:text-base font-semibold tracking-wider text-white uppercase group-hover:text-[#D3FD50] transition-colors">
             GURJAP SINGH
           </span>

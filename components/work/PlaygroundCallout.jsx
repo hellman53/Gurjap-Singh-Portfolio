@@ -40,6 +40,7 @@ const PlaygroundCallout = () => {
                 "3D Three.js Core",
                 "Retro CRT Hacker CLI",
                 "Web Audio Synth",
+                "3D Tic-Tac-Toe Arena",
               ].map((feat) => (
                 <span
                   key={feat}
