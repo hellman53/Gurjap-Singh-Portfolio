@@ -33,15 +33,15 @@ export const metadata = {
   description: "Welcome to the portfolio of Gurjap Singh — showcasing projects, skills, and creative work in web development and technology.",
   keywords: ["Gurjap Singh", "Portfolio", "Web Developer", "Frontend Developer", "React", "Next.js"],
   authors: [{ name: "Gurjap Singh" }],
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: {
     title: "Gurjap Singh | Portfolio",
     description: "Explore Gurjap Singh’s projects and achievements in web development and design.",
     siteName: "Gurjap Singh Portfolio",
-    icons: {
-      icon: "/image.png", // Your PNG icon
-      shortcut: "/image.png",
-      apple: "/image.png",
-    },
     images: [
       {
         url: "/image.png",
