@@ -1,4 +1,6 @@
-.link-span{
+@media (min-width: 768px) {
+  .link-span {
     padding: 1vh 4vh !important;
     padding-bottom: 0px !important;
+  }
 }

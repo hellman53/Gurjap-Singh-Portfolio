@@ -6,23 +6,24 @@ import SocialFloating from "@/components/home/SocialFloating";
 
 const Home = () => {
   return (
-    <div className="h-screen overflow-hidden relative">
+    <main className="h-[100dvh] w-full overflow-hidden relative select-none">
       {/* Background Video */}
-      <div className="h-full w-full fixed inset-0">
+      <div className="h-full w-full absolute inset-0 z-0 pointer-events-none">
         <Video />
       </div>
 
       {/* Hero Content */}
-      <div className="h-full w-full relative flex flex-col justify-between">
-        <HomeHeroText />
+      <div className="h-full w-full relative z-10 flex flex-col justify-between pt-20 sm:pt-24 md:pt-28 pb-4 sm:pb-6 md:pb-8 px-4 sm:px-6 md:px-8">
+        <div className="my-auto w-full">
+          <HomeHeroText />
+        </div>
         <HomeBottomText />
       </div>
 
-      {/* Floating Elements */}
+      {/* Floating Elements (Bottom dock on mobile, bottom-right on desktop) */}
       <SocialFloating />
-    </div>
+    </main>
   );
 };
-
 
 export default Home;
